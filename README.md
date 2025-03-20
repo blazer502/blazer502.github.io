@@ -1,2 +1,2 @@
-# chanyoung.github.io
+# BLAZER502
 Personal Pages
