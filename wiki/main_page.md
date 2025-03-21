@@ -40,12 +40,20 @@ th:nth-child(2), td:nth-child(2) { width: 50px; }
 
 table.edu-table {
     table-layout: fixed;
-    width: 600px;
+    width: 700px;
 }
 
 .edu-table td:first-child,
 .edu-table th:first-child {
     width: 10px;
+}
+
+table.sub-table {
+}
+
+.sub-table td,
+.sub-table th {
+    border: dashed!important;
 }
 
 </style>
@@ -94,12 +102,71 @@ table.edu-table {
 <table class="edu-table">
   <tr>
     <td>Mar. 2022 - Now</td>
-    <td>Ulsan National Institute of Science and Technology<br>Combined Master and PhD in Computer Science Engineering<br>Advisor. Hyungon Moon, Affiliation. CSSL of UNIST</td>
+    <td>Ulsan National Institute of Science and Technology (UNIST)<br>Combined Master and PhD in Computer Science Engineering<br>Advisor. Hyungon Moon, Affiliation. CSSL of UNIST</td>
   </tr>
   <tr>
     <td>Mar. 2015 - Feb. 2022</td>
-    <td>Ulsan National Institute of Science and Technology<br>B.S. in Computer Science and Engineering</td>
+    <td>Ulsan National Institute of Science and Technology (UNIST)<br>B.S. in Computer Science and Engineering</td>
   </tr>
 </table>
 
+### Experience
 
+<table class="edu-table">
+  <tr>
+    <td>2025</td>
+    <td><b>ACM EuroSys Artifact Evaluation Committee</b><br>Fall Cycle</td>
+  </tr>
+  <tr>
+    <td>2022 - 2024</td>
+    <td>
+        <b>Teaching Assistant</b><br>
+        Ulsan National Institute of Science and Technology (UNIST)<br>
+        <br>
+        <table class="sub-table">
+            <tr>
+                <th>Year</th>
+                <th>Semester</th>
+                <th>Lecture</th>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>Spring</td>
+                <td>Operating System</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>Fall</td>
+                <td>Principles of Program Language</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>Spring</td>
+                <td>Advanced Programming</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>Fall</td>
+                <td>Building Customized Computers</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>Spring</td>
+                <td>Software Hacking and Defense</td>
+            </tr>
+        </table>
+        <ul>
+        </ul>
+    </td>
+  </tr>
+</table>
+
+### Invited Talk
+
+<table>
+    <tr>
+        <td>2024</td>
+        <td>Sep</td>
+        <td><a href="https://youtu.be/qiP24ZHs8yI?si=p2tKXVUrdIaBMw3f">Efficient Use-After-Free Prevention with Opportunistic Page-Level Sweeping</a><br>SAMSUNG Security Tech Forum (SSTF) 2024</td>
+    </tr>
+</table>
