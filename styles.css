@@ -91,6 +91,23 @@ a:hover {
 header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 header .subtitle {
@@ -221,6 +238,7 @@ header .affiliation {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--link-color);
+  margin-right: 0.4rem;
 }
 
 /* Timeline List (Experience & Education) */
@@ -286,6 +304,18 @@ footer {
 }
 
 @media (max-width: 600px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .interest-tags {
+    justify-content: center;
+  }
   .pub-item, .timeline-item {
     flex-direction: column;
     gap: 0.5rem;
