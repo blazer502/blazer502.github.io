@@ -199,7 +199,7 @@ header .affiliation {
 }
 
 .pub-meta {
-  flex: 0 0 80px;
+  flex: 0 0 100px;
   padding-top: 0.1rem;
 }
 
@@ -212,6 +212,7 @@ header .affiliation {
   text-align: center;
   color: #fff;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 /* Custom badge colors for conferences */
@@ -225,9 +226,9 @@ header .affiliation {
   font-weight: 600;
   color: #0f172a;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.3;
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0;
 }
 
 .pub-links {
