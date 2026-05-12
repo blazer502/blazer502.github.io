@@ -31,7 +31,7 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
 }
 
 h1, h2, h3, h4 {
@@ -57,8 +57,8 @@ h2 {
   color: var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 0.5rem;
-  margin-top: 3.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .subsection-title {
@@ -89,8 +89,8 @@ a:hover {
 
 /* Header */
 header {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 header .subtitle {
@@ -164,13 +164,13 @@ header .affiliation {
 .pub-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .pub-item {
   display: flex;
   gap: 1.2rem;
-  padding: 1rem;
+  padding: 0.6rem;
   border-radius: 6px;
   border: 1px solid transparent;
   transition: all 0.2s ease;
@@ -198,11 +198,7 @@ header .affiliation {
 }
 
 /* Custom badge colors for conferences */
-.badge-sp { background-color: #b91c1c; } /* Red for S&P */
-.badge-fast { background-color: #0369a1; } /* Blue for FAST */
-.badge-ndss { background-color: #0f766e; } /* Teal for NDSS */
-.badge-tdsc { background-color: #4338ca; } /* Indigo for TDSC */
-.badge-ics { background-color: #b45309; } /* Amber for ICS */
+.badge-top { background-color: #16a34a; } /* Green for Top conferences */
 
 .pub-content {
   flex: 1;
@@ -231,7 +227,7 @@ header .affiliation {
 .timeline-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .timeline-item {
