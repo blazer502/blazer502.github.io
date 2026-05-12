@@ -7,261 +7,132 @@ permalink: /
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chanyoung Park | Computer Science Researcher</title>
-    <meta name="description" content="Portfolio of Chanyoung Park, Ph.D. Student at UNIST specializing in System Security, Operating Systems, and Memory Management.">
+    <title>Chanyoung Park</title>
+    <meta name="description" content="Portfolio of Chanyoung Park, Ph.D. Student at UNIST.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">Chanyoung Park</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <main class="container">
-        <!-- Hero Section -->
-        <section id="hero" class="hero visible">
-            <div class="hero-content">
-                <span class="hero-greeting">Hello, I'm</span>
-                <h1 class="hero-title">Chanyoung Park</h1>
-                <h2 class="hero-subtitle">Ph.D. Student in Computer Science</h2>
-                <p class="hero-desc">
-                    I am a Combined Master and Ph.D. student at <strong>UNIST</strong> (Ulsan National Institute of Science and Technology) in the <strong>CSSL</strong> lab, advised by Prof. Hyungon Moon. My research focuses on building secure and efficient system architectures.
-                </p>
-                <div class="hero-actions">
-                    <a href="#publications" class="btn btn-primary">
-                        <i data-lucide="file-text"></i> View Publications
-                    </a>
-                    <a href="mailto:chanyoung@unist.ac.kr" class="btn btn-secondary">
-                        <i data-lucide="mail"></i> Contact Me
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/blazer502" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
-                    <a href="mailto:chanyoung@unist.ac.kr" aria-label="Email"><i data-lucide="mail"></i></a>
-                    <a href="https://sites.google.com/view/chanyoungpark" target="_blank" aria-label="Google Sites"><i data-lucide="globe"></i></a>
-                </div>
+        <!-- Header / Hero -->
+        <header>
+            <h1>Chanyoung Park</h1>
+            <p class="subtitle">Ph.D. Student in Computer Science</p>
+            <p>
+                CSSL, Ulsan National Institute of Science and Technology (UNIST)<br>
+                Ulsan, South Korea
+            </p>
+            <div class="contact-links">
+                <a href="mailto:chanyoung@unist.ac.kr">Email</a> &bull;
+                <a href="https://github.com/blazer502" target="_blank">GitHub</a> &bull;
+                <a href="https://sites.google.com/view/chanyoungpark" target="_blank">Google Sites</a>
             </div>
-        </section>
+        </header>
 
-        <!-- About Section -->
         <section id="about">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="grid-cards">
-                <div class="grid-card">
-                    <i data-lucide="shield" class="grid-card-icon" width="32" height="32"></i>
-                    <h3 class="grid-card-title">System Security</h3>
-                    <p class="grid-card-desc">Mitigating memory corruption vulnerabilities (e.g., Use-After-Free) at the OS level.</p>
-                </div>
-                <div class="grid-card">
-                    <i data-lucide="cpu" class="grid-card-icon" width="32" height="32"></i>
-                    <h3 class="grid-card-title">Operating Systems</h3>
-                    <p class="grid-card-desc">Designing efficient memory allocators, sweeping architectures, and temporal safety mechanisms.</p>
-                </div>
-                <div class="grid-card">
-                    <i data-lucide="database" class="grid-card-icon" width="32" height="32"></i>
-                    <h3 class="grid-card-title">Memory Management</h3>
-                    <p class="grid-card-desc">Optimizing caching and resource isolation for serverless and in-storage computing environments.</p>
-                </div>
-                <div class="grid-card">
-                    <i data-lucide="code-2" class="grid-card-icon" width="32" height="32"></i>
-                    <h3 class="grid-card-title">Program Analysis</h3>
-                    <p class="grid-card-desc">Applying Static Value-Flow Analysis (SVF) and LLVM to detect software flaws systematically.</p>
-                </div>
-            </div>
+            <h2>About</h2>
+            <p>
+                I am a Combined Master and Ph.D. student at <strong>UNIST</strong>, advised by <a href="https://hyungon.unist.ac.kr/" target="_blank">Prof. Hyungon Moon</a>. My research interests broadly lie in <strong>System Security, Operating Systems, Memory Management, and Program Analysis</strong>. I focus on building secure and efficient system architectures, with a particular emphasis on mitigating memory corruption vulnerabilities at the OS level and optimizing resource isolation.
+            </p>
         </section>
 
-        <!-- Publications Section -->
         <section id="publications">
-            <h2 class="section-title">Publications</h2>
-            <div class="pub-list">
-                <!-- Pub 1 -->
-                <div class="pub-card">
-                    <div class="pub-venue">
-                        <span class="pub-venue-name">ICS</span>
-                        <span class="pub-venue-year">2026</span>
-                    </div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">FaaSlim: Partial Caching of Snapshot-based VMs for Serverless Computing</h3>
-                        <p class="pub-authors">Sanghyeon Eom, <span class="me">Chanyoung Park</span>, Gihong Lee, Hyungon Moon, and Young-ri Choi</p>
-                        <p class="pub-desc">ACM International Conference on Supercomputing (ICS)</p>
-                    </div>
-                </div>
-
-                <!-- Pub 2 -->
-                <div class="pub-card">
-                    <div class="pub-venue">
-                        <span class="pub-venue-name">TDSC</span>
-                        <span class="pub-venue-year">2025</span>
-                    </div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Efficient Use-After-Free Prevention with Pooling, OS-assisted, and Opportunistic Page-Level Sweeping</h3>
-                        <p class="pub-authors"><span class="me">Chanyoung Park</span>, Yeongjun Kwak, and Hyungon Moon</p>
-                        <p class="pub-desc">IEEE Transactions on Dependable and Secure Computing (TDSC)</p>
-                        <div class="pub-links">
-                            <a href="https://github.com/cssl-unist/hushvac-extension" target="_blank" class="pub-link"><i data-lucide="github" width="16" height="16"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pub 3 -->
-                <div class="pub-card">
-                    <div class="pub-venue">
-                        <span class="pub-venue-name">S&P</span>
-                        <span class="pub-venue-year">2025</span>
-                    </div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Defeating Use-After-Free Bugs Using Memory Sweeper Without Stop-the-World</h3>
-                        <p class="pub-authors">Junho Ahn, KangHyuk Lee, <span class="me">Chanyoung Park</span>, Hyungon Moon, and Youngjin Kwon</p>
-                        <p class="pub-desc">IEEE Symposium on Security and Privacy (S&P), San Diego, CA</p>
-                        <div class="pub-links">
-                            <a href="https://github.com/casys-kaist/SwiftSweeper" target="_blank" class="pub-link"><i data-lucide="github" width="16" height="16"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pub 4 -->
-                <div class="pub-card">
-                    <div class="pub-venue">
-                        <span class="pub-venue-name">FAST</span>
-                        <span class="pub-venue-year">2025</span>
-                    </div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Selective On-Device Execution of Data Dependent Read I/Os</h3>
-                        <p class="pub-authors"><span class="me">Chanyoung Park</span>, Minu Chung, and Hyungon Moon</p>
-                        <p class="pub-desc">USENIX Conference on File and Storage Technologies (FAST), Santa Clara, CA</p>
-                        <div class="pub-links">
-                            <a href="https://github.com/cssl-unist/sode" target="_blank" class="pub-link"><i data-lucide="github" width="16" height="16"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pub 5 -->
-                <div class="pub-card">
-                    <div class="pub-venue">
-                        <span class="pub-venue-name">NDSS</span>
-                        <span class="pub-venue-year">2024</span>
-                    </div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Efficient Use-After-Free Prevention with Opportunistic Page-Level Sweeping</h3>
-                        <p class="pub-authors"><span class="me">Chanyoung Park</span> and Hyungon Moon</p>
-                        <p class="pub-desc">Network and Distributed System Security Symposium (NDSS), San Diego, CA</p>
-                        <div class="pub-links">
-                            <a href="https://github.com/cssl-unist/hushvac" target="_blank" class="pub-link"><i data-lucide="github" width="16" height="16"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2>Publications</h2>
+            <ul class="pub-list">
+                <li>
+                    <strong>FaaSlim: Partial Caching of Snapshot-based VMs for Serverless Computing</strong><br>
+                    Sanghyeon Eom, <span class="me">Chanyoung Park</span>, Gihong Lee, Hyungon Moon, and Young-ri Choi.<br>
+                    <span class="venue">ACM International Conference on Supercomputing (ICS)</span>, 2026.
+                </li>
+                <li>
+                    <strong>Efficient Use-After-Free Prevention with Pooling, OS-assisted, and Opportunistic Page-Level Sweeping</strong><br>
+                    <span class="me">Chanyoung Park</span>, Yeongjun Kwak, and Hyungon Moon.<br>
+                    <span class="venue">IEEE Transactions on Dependable and Secure Computing (TDSC)</span>, 2025.<br>
+                    <a href="https://github.com/cssl-unist/hushvac-extension" class="link-btn" target="_blank">[GitHub]</a>
+                </li>
+                <li>
+                    <strong>Defeating Use-After-Free Bugs Using Memory Sweeper Without Stop-the-World</strong><br>
+                    Junho Ahn, KangHyuk Lee, <span class="me">Chanyoung Park</span>, Hyungon Moon, and Youngjin Kwon.<br>
+                    <span class="venue">IEEE Symposium on Security and Privacy (S&P)</span>, San Diego, CA, USA, May 2025.<br>
+                    <a href="https://github.com/casys-kaist/SwiftSweeper" class="link-btn" target="_blank">[GitHub]</a>
+                </li>
+                <li>
+                    <strong>Selective On-Device Execution of Data Dependent Read I/Os</strong><br>
+                    <span class="me">Chanyoung Park</span>, Minu Chung, and Hyungon Moon.<br>
+                    <span class="venue">USENIX Conference on File and Storage Technologies (FAST)</span>, Santa Clara, CA, USA, Feb. 2025.<br>
+                    <a href="https://github.com/cssl-unist/sode" class="link-btn" target="_blank">[GitHub]</a>
+                </li>
+                <li>
+                    <strong>Efficient Use-After-Free Prevention with Opportunistic Page-Level Sweeping</strong><br>
+                    <span class="me">Chanyoung Park</span> and Hyungon Moon.<br>
+                    <span class="venue">Network and Distributed System Security Symposium (NDSS)</span>, San Diego, CA, USA, Feb. 2024.<br>
+                    <a href="https://github.com/cssl-unist/hushvac" class="link-btn" target="_blank">[GitHub]</a>
+                </li>
+            </ul>
         </section>
 
-        <!-- Experience & Education -->
-        <div class="two-col">
-            <section id="experience">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">Feb 2020 - Present</span>
-                        <h3 class="timeline-title">Memory Allocator for Temporal Safety</h3>
-                        <p class="timeline-subtitle">Research Project</p>
-                        <div class="timeline-desc">
-                            <ul>
-                                <li>Designed and implemented <strong>HushVac</strong> and <strong>HushVac+</strong>, mitigating UAF vulnerabilities efficiently.</li>
-                                <li>Collaborated on <strong>SwiftSweeper</strong>, eliminating stop-the-world pauses.</li>
-                                <li>Pioneered OS-assisted UAF prevention on Glibc (MarKern system).</li>
-                            </ul>
-                        </div>
+        <section id="experience">
+            <h2>Research Experience</h2>
+            <ul class="timeline-list">
+                <li>
+                    <div class="timeline-meta">Feb. 2020 &ndash; Present</div>
+                    <div class="timeline-content">
+                        <strong>Memory Allocator for Temporal Safety</strong>
+                        <p>Designed and implemented HushVac and HushVac+, efficiently mitigating Use-After-Free (UAF) vulnerabilities. Collaborated on SwiftSweeper, a sweeping architecture eliminating stop-the-world pauses. Pioneered early work on OS-assisted UAF prevention on Glibc (MarKern).</p>
                     </div>
-                    
-                    <div class="timeline-item">
-                        <span class="timeline-date">Jan 2024 - Feb 2025</span>
-                        <h3 class="timeline-title">In-Storage Computing Architectures</h3>
-                        <p class="timeline-subtitle">Research Project</p>
-                        <div class="timeline-desc">
-                            <ul>
-                                <li>Developed <strong>SODE</strong> for selective on-device execution of data-dependent read I/Os.</li>
-                            </ul>
-                        </div>
+                </li>
+                <li>
+                    <div class="timeline-meta">Jan. 2024 &ndash; Feb. 2025</div>
+                    <div class="timeline-content">
+                        <strong>In-Storage Computing Architectures</strong>
+                        <p>Developed SODE, a mechanism for selective on-device execution of data-dependent read I/Os to optimize storage operations.</p>
                     </div>
-                    
-                    <div class="timeline-item">
-                        <span class="timeline-date">Dec 2025 - Mar 2026</span>
-                        <h3 class="timeline-title">Serverless Computing Optimization</h3>
-                        <p class="timeline-subtitle">Research Project</p>
-                        <div class="timeline-desc">
-                            <ul>
-                                <li>Collaborated on <strong>FaaSlim</strong>, optimizing serverless computing through partial VM caching.</li>
-                            </ul>
-                        </div>
+                </li>
+                <li>
+                    <div class="timeline-meta">Dec. 2025 &ndash; Mar. 2026</div>
+                    <div class="timeline-content">
+                        <strong>Serverless Computing Optimization</strong>
+                        <p>Collaborated on FaaSlim, optimizing serverless computing through partial caching of snapshot-based VMs.</p>
                     </div>
-                    
-                    <div class="timeline-item">
-                        <span class="timeline-date">Fall 2025</span>
-                        <h3 class="timeline-title">Artifact Evaluation Program Committee</h3>
-                        <p class="timeline-subtitle">ACM EuroSys</p>
-                        <div class="timeline-desc">
-                            Evaluated system research artifacts for reproducibility and rigorousness.
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </li>
+            </ul>
+        </section>
 
-            <section id="education">
-                <h2 class="section-title">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">Mar 2022 - Aug 2026 (Expected)</span>
-                        <h3 class="timeline-title">Ph.D. & Master in Computer Science Engineering</h3>
-                        <p class="timeline-subtitle">Ulsan National Institute of Science and Technology (UNIST)</p>
-                        <div class="timeline-desc">
-                            Advisor: Prof. Hyungon Moon<br>
-                            Affiliation: CSSL of UNIST
-                        </div>
+        <section id="education">
+            <h2>Education</h2>
+            <ul class="timeline-list">
+                <li>
+                    <div class="timeline-meta">Mar. 2022 &ndash; Aug. 2026 (Expected)</div>
+                    <div class="timeline-content">
+                        <strong>Combined Master and Ph.D. in Computer Science Engineering</strong><br>
+                        Ulsan National Institute of Science and Technology (UNIST)
                     </div>
-                    
-                    <div class="timeline-item">
-                        <span class="timeline-date">Mar 2015 - Feb 2022</span>
-                        <h3 class="timeline-title">B.S. in Computer Science and Engineering</h3>
-                        <p class="timeline-subtitle">Ulsan National Institute of Science and Technology (UNIST)</p>
+                </li>
+                <li>
+                    <div class="timeline-meta">Mar. 2015 &ndash; Feb. 2022</div>
+                    <div class="timeline-content">
+                        <strong>B.S. in Computer Science and Engineering</strong><br>
+                        Ulsan National Institute of Science and Technology (UNIST)
                     </div>
-                </div>
+                </li>
+            </ul>
+        </section>
 
-                <h2 class="section-title" style="margin-top: 4rem;">Honors & Awards</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">Feb 2025</span>
-                        <h3 class="timeline-title">USENIX FAST Student Grant</h3>
-                        <p class="timeline-subtitle">Santa Clara, CA, USA</p>
-                    </div>
-                </div>
-                
-                <h2 class="section-title" style="margin-top: 4rem;">Invited Talks</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">Sep 2024</span>
-                        <h3 class="timeline-title">Efficient Use-After-Free Prevention with Opportunistic Page-Level Sweeping</h3>
-                        <p class="timeline-subtitle">Samsung Security Tech Forum (SSTF) 2024</p>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <section id="misc">
+            <h2>Honors, Awards & Service</h2>
+            <ul>
+                <li><strong>Artifact Evaluation Program Committee</strong> &ndash; ACM EuroSys (Fall 2025)</li>
+                <li><strong>Student Grant</strong> &ndash; USENIX FAST (Feb. 2025)</li>
+                <li><strong>Invited Talk</strong> &ndash; Samsung Security Tech Forum (SSTF) 2024</li>
+                <li><strong>Teaching Assistant</strong> &ndash; Operating Systems, Software Hacking and Defense, Building Customized Computers (2022&ndash;2024)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Chanyoung Park. Last updated: May 2026.</p>
+        </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Chanyoung Park. All rights reserved.</p>
-    </footer>
-
 </body>
 </html>
