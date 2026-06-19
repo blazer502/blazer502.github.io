@@ -23,6 +23,7 @@ memory object has already been freed.
 
 ## Related Notes
 
+- [Temporal Memory Safety Violation]({{ '/notes/concepts/temporal-memory-safety-violation/' | relative_url }})
 - [Page Table]({{ '/notes/concepts/page-table/' | relative_url }})
 - [Memory Sweeper]({{ '/notes/papers/memory-sweeper/' | relative_url }})
 
@@ -36,3 +37,4 @@ memory object has already been freed.
 
 - [Memory Sweeper]({{ '/notes/papers/memory-sweeper/' | relative_url }})
 - [Page Table]({{ '/notes/concepts/page-table/' | relative_url }})
+- [Temporal Memory Safety Violation]({{ '/notes/concepts/temporal-memory-safety-violation/' | relative_url }})

@@ -14,6 +14,7 @@
     "source": "notes/papers/memory-sweeper.md",
     "url": "/notes/papers/memory-sweeper/",
     "backlinks": [
+      "Temporal Memory Safety Violation",
       "Use-After-Free"
     ]
   },
@@ -31,6 +32,28 @@
     "url": "/notes/concepts/page-table/",
     "backlinks": [
       "Memory Sweeper",
+      "Temporal Memory Safety Violation",
+      "Use-After-Free"
+    ]
+  },
+  {
+    "title": "Temporal Memory Safety Violation",
+    "aliases": [
+      "Temporal Safety Violation",
+      "Temporal Memory Safety",
+      "Temporal Bug"
+    ],
+    "tags": [
+      "system-security",
+      "memory-safety",
+      "vulnerability",
+      "memory",
+      "security"
+    ],
+    "status": "growing",
+    "source": "notes/concepts/temporal-memory-safety-violation.md",
+    "url": "/notes/concepts/temporal-memory-safety-violation/",
+    "backlinks": [
       "Use-After-Free"
     ]
   },
@@ -50,7 +73,8 @@
     "url": "/notes/concepts/use-after-free/",
     "backlinks": [
       "Memory Sweeper",
-      "Page Table"
+      "Page Table",
+      "Temporal Memory Safety Violation"
     ]
   }
 ]

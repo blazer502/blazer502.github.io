@@ -32,4 +32,5 @@ stop-the-world sweep.
 
 ## Backlinks
 
+- [Temporal Memory Safety Violation]({{ '/notes/concepts/temporal-memory-safety-violation/' | relative_url }})
 - [Use-After-Free]({{ '/notes/concepts/use-after-free/' | relative_url }})
