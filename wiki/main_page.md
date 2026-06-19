@@ -96,6 +96,9 @@ table.sub-table {
 * Cloud Computing
 * Machine Learning Security
 
+### Study Notes
+* [Study Notes]({{ '/notes/' | relative_url }})
+
 ### Education
 
 <table class="edu-table">

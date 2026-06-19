@@ -1,3 +1,7 @@
-source 'http://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-gem "jekyll-gitlab-metadata" # for cross compatibility
+source 'https://rubygems.org'
+
+ruby '>= 3.0'
+
+gem 'github-pages', '~> 232', group: :jekyll_plugins
+
+gem 'jekyll-gitlab-metadata' # for cross compatibility

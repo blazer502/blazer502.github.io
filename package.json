@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "notes:check": "node scripts/check-notes.js",
+    "notes:publish": "node scripts/publish-notes.js"
+  }
+}

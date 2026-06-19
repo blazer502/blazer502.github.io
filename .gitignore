@@ -7,3 +7,7 @@ _site/
 vendor/
 
 Gemfile.lock
+
+# Local Obsidian vault state
+notes/.obsidian/
+notes/.trash/

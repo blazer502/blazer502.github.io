@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Memory Sweeper",
+    "aliases": [
+      "Defeating Use-After-Free Bugs Using Memory Sweeper Without Stop-the-World"
+    ],
+    "tags": [
+      "paper",
+      "system-security",
+      "memory-safety",
+      "memory"
+    ],
+    "status": "seed",
+    "source": "notes/papers/memory-sweeper.md",
+    "url": "/notes/papers/memory-sweeper/",
+    "backlinks": [
+      "Use-After-Free"
+    ]
+  },
+  {
+    "title": "Page Table",
+    "aliases": [],
+    "tags": [
+      "operating-system",
+      "memory-management",
+      "os",
+      "memory"
+    ],
+    "status": "seed",
+    "source": "notes/concepts/page-table.md",
+    "url": "/notes/concepts/page-table/",
+    "backlinks": [
+      "Memory Sweeper",
+      "Use-After-Free"
+    ]
+  },
+  {
+    "title": "Use-After-Free",
+    "aliases": [
+      "UAF"
+    ],
+    "tags": [
+      "system-security",
+      "memory-safety",
+      "memory",
+      "security"
+    ],
+    "status": "seed",
+    "source": "notes/concepts/use-after-free.md",
+    "url": "/notes/concepts/use-after-free/",
+    "backlinks": [
+      "Memory Sweeper",
+      "Page Table"
+    ]
+  }
+]
