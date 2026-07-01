@@ -21,6 +21,7 @@ search_engine: "js"
 google_cse_token: 007197903287787072094:8rbvkeqo6qw
 wiki_folder: "wiki"
 site_root:
+url: "https://blazer502.github.io"
 
 #
 # Jekyll

@@ -1,15 +1,42 @@
 :root {
-  --text-color: #2c3e50;
   --bg-color: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #eef2f7;
+  --text-strong: #0f172a;
+  --text: #334155;
+  --text-muted: #475569;
+  --text-subtle: #64748b;
+  --text-faint: #94a3b8;
+  --border-color: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --accent-color: #0f172a;
   --link-color: #0056b3;
   --link-hover: #003d82;
   --me-color: #111111;
-  --meta-color: #666666;
-  --border-color: #e2e8f0;
-  --accent-color: #0f172a;
   --tag-bg: #f1f5f9;
   --tag-color: #334155;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0f1729;
+    --surface: #1a2537;
+    --surface-2: #22304a;
+    --text-strong: #f1f5f9;
+    --text: #cbd5e1;
+    --text-muted: #b4c0d0;
+    --text-subtle: #94a3b8;
+    --text-faint: #64748b;
+    --border-color: #2b3a52;
+    --border-strong: #3d4f6b;
+    --accent-color: #e2e8f0;
+    --link-color: #7dd3fc;
+    --link-hover: #bae6fd;
+    --me-color: #ffffff;
+    --tag-bg: #1a2537;
+    --tag-color: #cbd5e1;
+  }
 }
 
 * {
@@ -23,7 +50,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--text);
   background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
 }
@@ -66,14 +93,14 @@ h2 {
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 0.8rem;
-  color: #475569;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 p {
   margin-bottom: 1.2rem;
-  color: #334155;
+  color: var(--text);
 }
 
 a {
@@ -113,13 +140,13 @@ header {
 header .subtitle {
   font-size: 1.05rem;
   font-weight: 500;
-  color: #334155;
+  color: var(--text);
   margin-bottom: 0.3rem;
 }
 
 header .affiliation {
   font-size: 0.95rem;
-  color: #64748b;
+  color: var(--text-subtle);
   margin-bottom: 1rem;
   line-height: 1.4;
 }
@@ -137,13 +164,13 @@ header .affiliation {
   background: var(--tag-bg);
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
+  color: var(--text-strong);
+  border: 1px solid var(--border-color);
   transition: all 0.2s ease;
 }
 
 .contact-links a:hover {
-  background: #e2e8f0;
+  background: var(--surface-2);
   text-decoration: none;
 }
 
@@ -176,13 +203,13 @@ header .affiliation {
   padding: 0.85rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  background-color: #f8fafc;
-  color: #334155;
+  background-color: var(--surface);
+  color: var(--text);
 }
 
 .notes-card:hover {
-  background-color: #eef2f7;
-  color: #0f172a;
+  background-color: var(--surface-2);
+  color: var(--text-strong);
   text-decoration: none;
 }
 
@@ -193,10 +220,10 @@ header .affiliation {
   height: 2.2rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--border-strong);
   border-radius: 6px;
-  color: #0f172a;
-  background-color: #ffffff;
+  color: var(--text-strong);
+  background-color: var(--bg-color);
 }
 
 .notes-icon svg {
@@ -211,7 +238,7 @@ header .affiliation {
 
 .notes-card strong {
   display: block;
-  color: #0f172a;
+  color: var(--text-strong);
   font-size: 0.95rem;
   line-height: 1.3;
 }
@@ -219,7 +246,7 @@ header .affiliation {
 .notes-card span span {
   display: block;
   margin-top: 0.15rem;
-  color: #64748b;
+  color: var(--text-subtle);
   font-size: 0.9rem;
   line-height: 1.4;
 }
@@ -228,13 +255,13 @@ header .affiliation {
   font-weight: 600;
   color: var(--me-color);
   text-decoration: underline;
-  text-decoration-color: #cbd5e1;
+  text-decoration-color: var(--border-strong);
   text-decoration-thickness: 2px;
 }
 
 .venue {
   font-style: italic;
-  color: #475569;
+  color: var(--text-muted);
 }
 
 /* Publications List */
@@ -254,8 +281,8 @@ header .affiliation {
 }
 
 .pub-item:hover {
-  background-color: #f8fafc;
-  border-color: #e2e8f0;
+  background-color: var(--surface);
+  border-color: var(--border-color);
 }
 
 .pub-meta {
@@ -284,7 +311,7 @@ header .affiliation {
 
 .pub-content strong {
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text-strong);
   font-size: 1rem;
   line-height: 1.3;
   display: block;
@@ -318,7 +345,7 @@ header .affiliation {
   flex: 0 0 140px;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--meta-color);
+  color: var(--text-subtle);
   padding-top: 0.1rem;
 }
 
@@ -328,7 +355,7 @@ header .affiliation {
 
 .timeline-content strong {
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text-strong);
   font-size: 0.95rem;
   display: block;
 }
@@ -337,13 +364,13 @@ header .affiliation {
   margin-top: 0.3rem;
   margin-bottom: 0;
   font-size: 0.9rem;
-  color: #475569;
+  color: var(--text-muted);
 }
 
 /* Bullet list */
 .bullet-list {
   padding-left: 1.2rem;
-  color: #334155;
+  color: var(--text);
 }
 
 .bullet-list li {
@@ -351,7 +378,7 @@ header .affiliation {
 }
 
 .bullet-list strong {
-  color: #0f172a;
+  color: var(--text-strong);
   font-weight: 600;
 }
 
@@ -360,7 +387,7 @@ footer {
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-color);
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: var(--text-faint);
   text-align: center;
 }
 
@@ -391,5 +418,56 @@ footer {
   .pub-item:hover {
     background-color: transparent;
     border-color: transparent;
+  }
+}
+
+/* Print — clean CV, e.g. Ctrl/Cmd+P -> Save as PDF */
+@media print {
+  :root {
+    --bg-color: #ffffff;
+    --text: #1a1a1a;
+    --text-strong: #000000;
+    --text-muted: #333333;
+    --text-subtle: #444444;
+    --accent-color: #000000;
+  }
+  body {
+    font-size: 10.5pt;
+    color: #000;
+    background: #fff;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  .profile-pic {
+    box-shadow: none;
+  }
+  .contact-links a {
+    background: transparent;
+    border: none;
+    padding: 0.1rem 0;
+  }
+  .notes-entry {
+    display: none;
+  }
+  h2 {
+    margin-top: 1.4rem;
+  }
+  .badge {
+    color: #000;
+    background: transparent !important;
+    padding: 0;
+    font-weight: 700;
+  }
+  .pub-item, .timeline-item, li {
+    break-inside: avoid;
+  }
+  section, footer {
+    break-inside: avoid;
   }
 }

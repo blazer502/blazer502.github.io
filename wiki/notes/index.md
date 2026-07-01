@@ -22,12 +22,17 @@ Start from broad maps, then connect concepts and papers with wikilinks:
 [#system-security]({{ '/notes/tags/system-security/' | relative_url }}) [#operating-system]({{ '/notes/tags/operating-system/' | relative_url }})
 
 
-## All Notes
+## Notes by Topic (4)
 
-- [Memory Sweeper]({{ '/notes/papers/memory-sweeper/' | relative_url }}) [#paper]({{ '/notes/tags/paper/' | relative_url }}) [#system-security]({{ '/notes/tags/system-security/' | relative_url }}) [#memory-safety]({{ '/notes/tags/memory-safety/' | relative_url }}) [#memory]({{ '/notes/tags/memory/' | relative_url }})
+### Concepts (3)
+
 - [Page Table]({{ '/notes/concepts/page-table/' | relative_url }}) [#operating-system]({{ '/notes/tags/operating-system/' | relative_url }}) [#memory-management]({{ '/notes/tags/memory-management/' | relative_url }}) [#os]({{ '/notes/tags/os/' | relative_url }}) [#memory]({{ '/notes/tags/memory/' | relative_url }})
 - [Temporal Memory Safety Violation]({{ '/notes/concepts/temporal-memory-safety-violation/' | relative_url }}) [#system-security]({{ '/notes/tags/system-security/' | relative_url }}) [#memory-safety]({{ '/notes/tags/memory-safety/' | relative_url }}) [#vulnerability]({{ '/notes/tags/vulnerability/' | relative_url }}) [#memory]({{ '/notes/tags/memory/' | relative_url }}) [#security]({{ '/notes/tags/security/' | relative_url }})
 - [Use-After-Free]({{ '/notes/concepts/use-after-free/' | relative_url }}) [#system-security]({{ '/notes/tags/system-security/' | relative_url }}) [#memory-safety]({{ '/notes/tags/memory-safety/' | relative_url }}) [#memory]({{ '/notes/tags/memory/' | relative_url }}) [#security]({{ '/notes/tags/security/' | relative_url }})
+
+### Papers (1)
+
+- [Memory Sweeper]({{ '/notes/papers/memory-sweeper/' | relative_url }}) [#paper]({{ '/notes/tags/paper/' | relative_url }}) [#system-security]({{ '/notes/tags/system-security/' | relative_url }}) [#memory-safety]({{ '/notes/tags/memory-safety/' | relative_url }}) [#memory]({{ '/notes/tags/memory/' | relative_url }})
 
 ## Tags
 
