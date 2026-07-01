@@ -662,6 +662,41 @@ a:hover {
   .site-nav-inner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 
+/* Toggle buttons + collapsible lists (Publications "Full List", Patents) */
+.toggle-btn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-strong);
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.35rem 0.9rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.toggle-btn:hover { background: var(--surface-2); }
+
+.toggle-btn::after { content: " \25BE"; }
+.toggle-btn[aria-expanded="true"]::after { content: " \25B4"; }
+
+.pub-extra { display: none; }
+.pub-list.is-open .pub-extra { display: flex; }
+
+.toggle-list { display: none; margin-top: 0.8rem; }
+.toggle-list.is-open { display: block; }
+
+.patent-summary { margin: 0; color: var(--text-subtle); font-size: 0.9rem; }
+
+.patent-list { padding-left: 1.2rem; color: var(--text); }
+.patent-list li { margin-bottom: 0.9rem; }
+.patent-list strong { color: var(--text-strong); }
+.patent-meta { display: block; margin-top: 0.2rem; color: var(--text-subtle); font-size: 0.85rem; }
+
+.muted { color: var(--text-subtle); }
+
 /* Print — clean CV, e.g. Ctrl/Cmd+P -> Save as PDF */
 @media print {
   :root {
@@ -709,6 +744,15 @@ a:hover {
     background: transparent !important;
     padding: 0;
     font-weight: 700;
+  }
+  .toggle-btn {
+    display: none;
+  }
+  .pub-extra {
+    display: flex !important;
+  }
+  .toggle-list {
+    display: block !important;
   }
   .pub-item, .timeline-item, li {
     break-inside: avoid;
