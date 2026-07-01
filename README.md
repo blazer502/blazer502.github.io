@@ -3,13 +3,12 @@ Personal Pages
 
 ## Site structure
 
-The site is a blog first, with the CV and knowledge base one click away:
+The CV is the landing page, with the blog one click away in the nav:
 
 | Area | URL | Source |
 | --- | --- | --- |
-| Blog (home) | `/` | `index.html` + posts in `_posts/` |
-| CV | `/cv/` | `cv.html` |
-| Notes (knowledge base) | `/notes/` | compiled from `notes/` into `wiki/notes/` |
+| CV (home) | `/` | `index.html` |
+| Blog | `/blog/` | `blog.html` + posts in `_posts/` |
 
 Shared chrome (nav, footer, SEO) lives in `_layouts/base.html`; posts use
 `_layouts/post.html`. Styling is in `styles.css`.
@@ -30,7 +29,7 @@ description: "One or two sentences used for the excerpt and social preview."
 Write in Markdown. The first paragraph is used as the excerpt on the home page.
 ```
 
-Posts appear newest-first on the home page and get a clean URL like
+Posts appear newest-first at `/blog/` and get a clean URL like
 `/blog/2026/07/01/title/`. No `layout:` line is needed — it is applied
 automatically.
 
@@ -52,42 +51,11 @@ For local serving:
 ./run.sh
 ```
 
-## Study Notes
+## Notes (retired)
 
-Source notes live in `notes/` and are written in an Obsidian-like style with
-wikilinks such as `[[Use-After-Free]]`, `[[Use-After-Free|UAF]]`, and `#tags`.
-They publish to interlinked wiki pages under `/notes/` on the site.
-
-### Organize by topic
-
-**A note's top-level folder is its topic.** The published index at `/notes/`
-groups notes into a "Notes by Topic" section, one heading per folder, with a
-count. Add a new topic simply by adding a new folder:
-
-```
-notes/
-  concepts/      -> "Concepts" section
-  papers/        -> "Papers" section
-  networking/    -> "Networking" section  (just create the folder)
-```
-
-Tags (`#security`, `tags: [paper]`) are the cross-cutting axis: one note can
-carry many tags, and every tag gets its own page under `/notes/tags/`.
-
-### Add a note
-
-1. Copy a starter from `notes/templates/` (`concept.md` or `paper.md`) into the
-   right topic folder, e.g. `notes/networking/tcp-congestion-control.md`.
-2. Fill in the frontmatter (`title`, `aliases`, `tags`, `status`) and body.
-3. Link related notes with `[[Wikilinks]]`; backlinks are generated
-   automatically.
-
-### Publish & check
-
-```sh
-npm run notes:publish   # regenerate wiki/notes/ from notes/
-npm run notes:check     # report broken or ambiguous wikilinks
-```
-
-The generated pages live in `wiki/notes/`; always edit the source files in
-`notes/` instead of the generated pages.
+The old Obsidian-style Notes / wiki area (built on the `git-wiki-theme`) is no
+longer published — it clashed with the site's design. The source vault
+(`notes/`), the generated wiki (`wiki/`), and the tooling (`scripts/`) are still
+in the repo but are listed under `exclude:` in `_config.yml`, so Jekyll does not
+serve them. To bring it back, remove `wiki` and `notes` from that `exclude`
+list; to delete it for good, remove those directories and the notes scripts.

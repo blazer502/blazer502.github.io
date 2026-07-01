@@ -175,6 +175,18 @@ a:hover {
   text-decoration: none;
 }
 
+.contact-links a.cv-download {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border-color: var(--accent-color);
+}
+
+.contact-links a.cv-download:hover {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg-color);
+}
+
 /* Research Interests Tags */
 .interest-tags {
   display: flex;
@@ -466,57 +478,27 @@ a:hover {
 .site-links a { color: var(--text-subtle); }
 .site-links a:hover { color: var(--text-strong); text-decoration: none; }
 
-/* Blog home intro */
-.intro {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin: 1rem 0 2.5rem;
-  padding-bottom: 2rem;
+/* Blog index header */
+.blog-header {
+  margin: 0.5rem 0 2rem;
+  padding-bottom: 1.4rem;
   border-bottom: 1px solid var(--border-color);
 }
 
-.intro-avatar {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex: 0 0 auto;
-  border: 1px solid var(--border-color);
-}
-
-.intro-text h1 {
+.blog-header h1 {
   font-family: var(--font-display);
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
-.intro-tagline {
-  margin: 0 0 0.8rem;
+.blog-header p {
+  margin: 0;
   color: var(--text-muted);
-  font-size: 0.98rem;
-}
-
-.intro-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 0.9rem;
-  font-weight: 500;
 }
 
 /* Post list */
-.posts h2 {
-  border-bottom: none;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 1.15rem;
-  color: var(--text-subtle);
-  margin-bottom: 0.5rem;
-}
-
 .post-list {
   display: flex;
   flex-direction: column;
@@ -540,6 +522,10 @@ a:hover {
   font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.25;
+  letter-spacing: normal;
+  text-transform: none;
+  border-bottom: none;
+  padding-bottom: 0;
   margin: 0.3rem 0 0.5rem;
 }
 
@@ -673,8 +659,6 @@ a:hover {
 
 @media (max-width: 600px) {
   .site-nav-inner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-  .intro { flex-direction: column; text-align: center; align-items: center; }
-  .intro-links { justify-content: center; }
 }
 
 /* Print — clean CV, e.g. Ctrl/Cmd+P -> Save as PDF */
@@ -707,6 +691,9 @@ a:hover {
     background: transparent;
     border: none;
     padding: 0.1rem 0;
+  }
+  .contact-links a.cv-download {
+    display: none;
   }
   .site-nav,
   .site-footer,

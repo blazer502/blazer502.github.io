@@ -1,0 +1,35 @@
+---
+layout: base
+permalink: /blog/
+title: Blog
+description: "Chanyoung Park's blog — short posts on system security, operating systems, memory management, and research life."
+---
+
+<header class="blog-header">
+  <h1>Writing</h1>
+  <p>Short posts on systems, security, and what I'm reading.</p>
+</header>
+
+<section class="posts">
+  {% if site.posts.size > 0 %}
+  <div class="post-list">
+    {% for post in site.posts %}
+    <article class="post-list-item">
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        {%- if post.category %} &middot; {{ post.category }}{% endif -%}
+      </div>
+      <h2 class="post-list-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-excerpt">{{ post.description | default: post.excerpt | strip_html | truncatewords: 34 }}</p>
+      {%- if post.tags and post.tags.size > 0 -%}
+      <div class="post-tags">
+        {% for tag in post.tags %}<span class="post-tag">#{{ tag }}</span>{% endfor %}
+      </div>
+      {%- endif -%}
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">No posts yet — the first one is on its way.</p>
+  {% endif %}
+</section>

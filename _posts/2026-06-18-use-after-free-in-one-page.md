@@ -24,6 +24,4 @@ address?
 
 That "when is it safe to reuse" question is exactly what a lot of my work is
 about — sweeping the heap to confirm no dangling references remain before an
-address is recycled. If you want the longer version, the
-[Use-After-Free note]({{ '/notes/concepts/use-after-free/' | relative_url }})
-has more, and the [CV]({{ '/cv/' | relative_url }}) links the papers.
+address is recycled. My [CV]({{ '/' | relative_url }}) links the papers.
