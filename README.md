@@ -21,20 +21,40 @@ For local serving:
 
 ## Study Notes
 
-Write source notes in `notes/` with Obsidian-style wikilinks such as
-`[[Use-After-Free]]`, `[[Use-After-Free|UAF]]`, and `#tags`.
+Source notes live in `notes/` and are written in an Obsidian-like style with
+wikilinks such as `[[Use-After-Free]]`, `[[Use-After-Free|UAF]]`, and `#tags`.
+They publish to interlinked wiki pages under `/notes/` on the site.
 
-Publish them to the Jekyll wiki with:
+### Organize by topic
 
-```sh
-npm run notes:publish
+**A note's top-level folder is its topic.** The published index at `/notes/`
+groups notes into a "Notes by Topic" section, one heading per folder, with a
+count. Add a new topic simply by adding a new folder:
+
+```
+notes/
+  concepts/      -> "Concepts" section
+  papers/        -> "Papers" section
+  networking/    -> "Networking" section  (just create the folder)
 ```
 
-Check for broken or ambiguous wikilinks with:
+Tags (`#security`, `tags: [paper]`) are the cross-cutting axis: one note can
+carry many tags, and every tag gets its own page under `/notes/tags/`.
+
+### Add a note
+
+1. Copy a starter from `notes/templates/` (`concept.md` or `paper.md`) into the
+   right topic folder, e.g. `notes/networking/tcp-congestion-control.md`.
+2. Fill in the frontmatter (`title`, `aliases`, `tags`, `status`) and body.
+3. Link related notes with `[[Wikilinks]]`; backlinks are generated
+   automatically.
+
+### Publish & check
 
 ```sh
-npm run notes:check
+npm run notes:publish   # regenerate wiki/notes/ from notes/
+npm run notes:check     # report broken or ambiguous wikilinks
 ```
 
-The generated pages live in `wiki/notes/`; edit the source files in `notes/`
-instead of editing generated pages directly.
+The generated pages live in `wiki/notes/`; always edit the source files in
+`notes/` instead of the generated pages.

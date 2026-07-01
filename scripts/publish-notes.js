@@ -64,6 +64,47 @@ function renderNote(workspace, note) {
   ].join('\n');
 }
 
+function humanizeSegment(segment) {
+  return segment
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+function categoryOf(note) {
+  const segments = note.relPath.split('/');
+  return segments.length > 1 ? segments[0] : '';
+}
+
+function noteLine(note) {
+  const tagText = note.tags.map((tag) => `[#${tag}](${liquidLink(`/notes/tags/${tagSlug(tag)}/`)})`).join(' ');
+  return `- ${markdownLink(note.title, note.permalink)}${tagText ? ` ${tagText}` : ''}`;
+}
+
+function renderTopicSections(notes) {
+  const groups = new Map();
+  for (const note of notes) {
+    const key = categoryOf(note) || '_general';
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(note);
+  }
+
+  const entries = [...groups.entries()].sort((a, b) => {
+    if (a[0] === '_general') return 1;
+    if (b[0] === '_general') return -1;
+    return a[0].localeCompare(b[0]);
+  });
+
+  return entries
+    .map(([key, groupNotes]) => {
+      const label = key === '_general' ? 'General' : humanizeSegment(key);
+      const items = sortedNotes(groupNotes).map(noteLine).join('\n');
+      return `### ${label} (${groupNotes.length})\n\n${items}`;
+    })
+    .join('\n\n');
+}
+
 function renderIndex(workspace) {
   const index = workspace.indexSource;
   const title = index ? index.title : 'Study Notes';
@@ -71,12 +112,7 @@ function renderIndex(workspace) {
   const notes = sortedNotes(workspace.notes);
   const tags = sortedTags(workspace.notes);
 
-  const noteItems = notes
-    .map((note) => {
-      const tagText = note.tags.map((tag) => `[#${tag}](${liquidLink(`/notes/tags/${tagSlug(tag)}/`)})`).join(' ');
-      return `- ${markdownLink(note.title, note.permalink)}${tagText ? ` ${tagText}` : ''}`;
-    })
-    .join('\n');
+  const topicSections = renderTopicSections(notes);
 
   const tagItems = tags
     .map((tag) => `- [#${tag}](${liquidLink(`/notes/tags/${tagSlug(tag)}/`)})`)
@@ -92,9 +128,9 @@ function renderIndex(workspace) {
     '',
     intro,
     '',
-    '## All Notes',
+    `## Notes by Topic (${notes.length})`,
     '',
-    noteItems || 'No notes yet.',
+    topicSections || 'No notes yet.',
     '',
     '## Tags',
     '',
