@@ -31,10 +31,11 @@ url: "https://blazer502.github.io"
 markdown: kramdown
 highlighter: rouge
 
-# The `notes/` vault and `scripts/` are source/tooling, compiled into
-# `wiki/notes/` by `npm run notes:publish`. Never serve them directly.
+# The Notes / wiki area is unpublished: it used the old git-wiki theme and no
+# longer fits the site. Source and tooling stay in the repo but are not served.
 # (Setting `exclude` replaces Jekyll's defaults, so the build tooling is re-listed.)
 exclude:
+  - wiki
   - notes
   - scripts
   - package.json

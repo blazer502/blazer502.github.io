@@ -55,9 +55,8 @@
     <div class="site-nav-inner">
       <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <nav class="site-links" aria-label="Primary">
-        <a href="{{ '/' | relative_url }}">Blog</a>
-        <a href="{{ '/notes/' | relative_url }}">Notes</a>
-        <a href="{{ '/cv/' | relative_url }}">CV</a>
+        <a href="{{ '/' | relative_url }}">CV</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
         <a href="https://github.com/blazer502" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
@@ -69,8 +68,8 @@
 
   <footer class="site-footer">
     <p>&copy; 2026 {{ site.title }} &middot;
-      <a href="{{ '/cv/' | relative_url }}">CV</a> &middot;
-      <a href="{{ '/notes/' | relative_url }}">Notes</a> &middot;
+      <a href="{{ '/' | relative_url }}">CV</a> &middot;
+      <a href="{{ '/blog/' | relative_url }}">Blog</a> &middot;
       <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
     </p>
   </footer>

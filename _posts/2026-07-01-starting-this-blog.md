@@ -14,12 +14,8 @@ operating systems, memory safety, and system security — plus the occasional
 note on papers I'm reading and lessons from research life. Nothing here is
 meant to be a polished paper; it's a place to think out loud.
 
-Two things live alongside the blog:
-
-- **[Notes]({{ '/notes/' | relative_url }})** — an interlinked knowledge base of
-  concepts and paper summaries, organized by topic.
-- **[CV]({{ '/cv/' | relative_url }})** — publications, research experience, and
-  the formal record.
+For the formal record — publications, research experience, and education — see
+my [CV]({{ '/' | relative_url }}).
 
 If something here is wrong or could be sharper, tell me. That's half the point
 of writing it down.
