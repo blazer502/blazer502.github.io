@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- if page.title and page.title != site.title -%}
+  <title>{{ page.title }} · {{ site.title }}</title>
+  {%- else -%}
+  <title>{{ site.title }}</title>
+  {%- endif -%}
+  {%- assign desc = page.description | default: site.seo_description -%}
+  <meta name="description" content="{{ desc | strip_html | strip_newlines }}">
+  <meta name="author" content="{{ site.title }}">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Icons -->
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/chanyoung.jpg' | relative_url }}">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ desc | strip_html | strip_newlines }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/images/chanyoung.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chanyoung Park",
+    "url": "https://blazer502.github.io/",
+    "image": "https://blazer502.github.io/assets/images/chanyoung.jpg",
+    "jobTitle": "Ph.D. Student in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Ulsan National Institute of Science and Technology (UNIST)" },
+    "sameAs": [
+      "https://github.com/blazer502",
+      "https://www.linkedin.com/in/park-chanyoung-826567195",
+      "https://sites.google.com/view/chanyoungpark"
+    ],
+    "knowsAbout": ["System Security", "Operating Systems", "Memory Management", "Program Analysis"]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-links" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}">Blog</a>
+        <a href="{{ '/notes/' | relative_url }}">Notes</a>
+        <a href="{{ '/cv/' | relative_url }}">CV</a>
+        <a href="https://github.com/blazer502" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 {{ site.title }} &middot;
+      <a href="{{ '/cv/' | relative_url }}">CV</a> &middot;
+      <a href="{{ '/notes/' | relative_url }}">Notes</a> &middot;
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </p>
+  </footer>
+</body>
+</html>

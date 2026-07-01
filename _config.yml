@@ -1,5 +1,7 @@
 # (string) Title of your wiki
 title: Chanyoung Park
+tagline: "Writing and notes on systems, security, and research."
+seo_description: "Chanyoung Park's blog — writing and notes on system security, operating systems, memory management, and research life as a Ph.D. student at UNIST."
 demo_ver: 1.0.24
 description: "I am a student in a Combined Master's and Doctorate program at UNIST (Ulsan National Institute of Science and Technology, South Korea) under the supervision of <a href='https://hyungon.unist.ac.kr/'>Prof.Hyungon Moon</a>."
 show_downloads: true
@@ -7,7 +9,7 @@ show_wiki_pages: true
 show_wiki_pages_limit: 10
 paginate: 2
 paginate_path: "/assets/blog/page:num"
-permalink: "/assets/blog/posts/:year/:month/:day/:title:output_ext"
+permalink: "/blog/:year/:month/:day/:title/"
 blog_feature: true
 show_wiki_posts: true
 show_wiki_posts_limit: 5
@@ -28,6 +30,24 @@ url: "https://blazer502.github.io"
 #
 markdown: kramdown
 highlighter: rouge
+
+# The `notes/` vault and `scripts/` are source/tooling, compiled into
+# `wiki/notes/` by `npm run notes:publish`. Never serve them directly.
+# (Setting `exclude` replaces Jekyll's defaults, so the build tooling is re-listed.)
+exclude:
+  - notes
+  - scripts
+  - package.json
+  - run.sh
+  - Dockerfile
+  - docker-compose.yml
+  - PULL_REQUEST_TEMPLATE.md
+  - README.md
+  - vendor
+  - node_modules
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -50,7 +70,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "git-wiki-post"
+      layout: "post"
   - scope:
       path: assets/blog
     values:
