@@ -73,5 +73,19 @@
       <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
     </p>
   </footer>
+
+  <script>
+    document.querySelectorAll('[data-toggle-target]').forEach(function (btn) {
+      var target = document.querySelector(btn.getAttribute('data-toggle-target'));
+      if (!target) return;
+      btn.addEventListener('click', function () {
+        var open = target.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        var openLabel = btn.getAttribute('data-label-open');
+        var baseLabel = btn.getAttribute('data-label');
+        if (openLabel && baseLabel) btn.textContent = open ? openLabel : baseLabel;
+      });
+    });
+  </script>
 </body>
 </html>

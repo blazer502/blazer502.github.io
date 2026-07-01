@@ -41,7 +41,7 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
 
 <section id="publications">
   <h2>Publications</h2>
-  <div class="pub-list">
+  <div class="pub-list" id="pub-list">
     <div class="pub-item">
       <div class="pub-meta">
         <span class="badge badge-top">ICS 2026</span>
@@ -112,22 +112,7 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
         </div>
       </div>
     </div>
-  </div>
-
-  <h3 class="subsection-title">Domestic Publications</h3>
-  <div class="pub-list">
-    <div class="pub-item">
-      <div class="pub-meta">
-        <span class="badge badge-domestic">KIISE</span>
-      </div>
-      <div class="pub-content">
-        <strong>Operating System Support-based Prevention Mechanism for Use-after-Free Attacks on the Glibc Memory Allocator (MarKern)</strong>
-        <span class="me">Chanyoung Park</span> and Hyungon Moon.<br>
-        <span class="venue">Journal of KIISE</span>
-      </div>
-    </div>
-
-    <div class="pub-item">
+    <div class="pub-item pub-extra">
       <div class="pub-meta">
         <span class="badge badge-domestic">KIPS 2024</span>
       </div>
@@ -137,7 +122,29 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
         <span class="venue">KIPS Annual Conference on Computing (ACK)</span>
       </div>
     </div>
+
+    <div class="pub-item pub-extra">
+      <div class="pub-meta">
+        <span class="badge badge-domestic">KIISE</span>
+      </div>
+      <div class="pub-content">
+        <strong>Operating System Support-based Prevention Mechanism for Use-after-Free Attacks on the Glibc Memory Allocator (MarKern)</strong>
+        <span class="me">Chanyoung Park</span> and Hyungon Moon.<br>
+        <span class="venue">Journal of KIISE</span>
+      </div>
+    </div>
   </div>
+
+  <button type="button" class="toggle-btn" data-toggle-target="#pub-list" data-label="Show Full List" data-label-open="Show Top-tier Only" aria-expanded="false" aria-controls="pub-list">Show Full List</button>
+</section>
+
+<section id="patents">
+  <h2>Patents</h2>
+  <button type="button" class="toggle-btn" data-toggle-target="#patent-list" data-label="Show Patents" data-label-open="Hide Patents" aria-expanded="false" aria-controls="patent-list">Show Patents</button>
+  <ul class="patent-list toggle-list" id="patent-list">
+    <!-- Add each patent as: <li><strong>Title</strong> — Inventors. App./Reg. No. (Year), Country.</li> -->
+    <li class="muted"><em>Patent records to be added.</em></li>
+  </ul>
 </section>
 
 <section id="experience">
