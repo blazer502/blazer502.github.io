@@ -688,8 +688,12 @@ a:hover {
 .toggle-list { display: none; margin-top: 0.8rem; }
 .toggle-list.is-open { display: block; }
 
+.patent-summary { margin: 0; color: var(--text-subtle); font-size: 0.9rem; }
+
 .patent-list { padding-left: 1.2rem; color: var(--text); }
-.patent-list li { margin-bottom: 0.5rem; }
+.patent-list li { margin-bottom: 0.9rem; }
+.patent-list strong { color: var(--text-strong); }
+.patent-meta { display: block; margin-top: 0.2rem; color: var(--text-subtle); font-size: 0.85rem; }
 
 .muted { color: var(--text-subtle); }
 

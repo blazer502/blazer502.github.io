@@ -27,15 +27,17 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
 <section id="about">
   <h2>About</h2>
   <p>
-    I am a Combined Master and Ph.D. student at <strong>UNIST</strong>, advised by <a href="https://hyungon.unist.ac.kr/" target="_blank" rel="noopener">Prof. Hyungon Moon</a>. My research focuses on building secure and efficient system architectures. I aim to fundamentally mitigate memory corruption vulnerabilities at the OS level while optimizing resource isolation.
+    I am a Combined M.S./Ph.D. student at <strong>UNIST</strong>, advised by <a href="https://hyungon.unist.ac.kr/" target="_blank" rel="noopener">Prof. Hyungon Moon</a> in the Computer Systems Security Lab. My research is in systems and software security — memory safety, isolation, program analysis, operating systems, and secure cloud infrastructure. I build mechanisms that define and enforce trust boundaries across compilers, runtimes, operating systems, and hardware.
   </p>
 
   <h3 class="subsection-title">Research Interests</h3>
   <div class="interest-tags">
-    <span class="tag">System Security</span>
-    <span class="tag">Operating Systems</span>
-    <span class="tag">Memory Management</span>
+    <span class="tag">Memory Safety</span>
+    <span class="tag">Isolation</span>
     <span class="tag">Program Analysis</span>
+    <span class="tag">Operating Systems</span>
+    <span class="tag">System Security</span>
+    <span class="tag">Secure Cloud Infrastructure</span>
   </div>
 </section>
 
@@ -114,23 +116,23 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
     </div>
     <div class="pub-item pub-extra">
       <div class="pub-meta">
-        <span class="badge badge-domestic">KIPS 2024</span>
+        <span class="badge badge-domestic">ASK 2024</span>
       </div>
       <div class="pub-content">
         <strong>Analysis of Memory Allocator Call Sites Used Only Within the Stack Using SVF</strong>
-        <span class="me">Chanyoung Park</span> (second author).<br>
-        <span class="venue">KIPS Annual Conference on Computing (ACK)</span>
+        Seon Ha, <span class="me">Chanyoung Park</span>, Yeongjun Kwak, and Hyungon Moon.<br>
+        <span class="venue">Annual Symposium of KIPS (ASK), vol. 31, no. 1, 2024</span>
       </div>
     </div>
 
     <div class="pub-item pub-extra">
       <div class="pub-meta">
-        <span class="badge badge-domestic">KIISE</span>
+        <span class="badge badge-domestic">JOK 2023</span>
       </div>
       <div class="pub-content">
-        <strong>Operating System Support-based Prevention Mechanism for Use-after-Free Attacks on the Glibc Memory Allocator (MarKern)</strong>
-        <span class="me">Chanyoung Park</span> and Hyungon Moon.<br>
-        <span class="venue">Journal of KIISE</span>
+        <strong>An Operating System Support-based Prevention Mechanism for Use-After-Free Attacks on the glibc Memory Allocator (MarKern)</strong>
+        <span class="me">Chanyoung Park</span>, Jaehyu Lee, Daeyeon Kim, and Hyungon Moon.<br>
+        <span class="venue">Journal of KIISE (JOK), 2023</span>
       </div>
     </div>
   </div>
@@ -140,10 +142,29 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
 
 <section id="patents">
   <h2>Patents</h2>
+  <p class="patent-summary">Granted: 1 U.S. and 1 Korean patent. Pending: 1 U.S., 4 Korean, and 2 PCT applications.</p>
   <button type="button" class="toggle-btn" data-toggle-target="#patent-list" data-label="Show Patents" data-label-open="Hide Patents" aria-expanded="false" aria-controls="patent-list">Show Patents</button>
   <ul class="patent-list toggle-list" id="patent-list">
-    <!-- Add each patent as: <li><strong>Title</strong> — Inventors. App./Reg. No. (Year), Country.</li> -->
-    <li class="muted"><em>Patent records to be added.</em></li>
+    <li>
+      <strong>Use-After-Free Protection via Pooling, OS-Assisted, and Opportunistic Page-Level Sweeping</strong><br>
+      Hyungon Moon, <span class="me">Chanyoung Park</span>, and Yeongjun Kwak.
+      <span class="patent-meta">Filed: KR 10-2025-0091241 (2025.07.07); KR 10-2025-0027787 (2025.03.04); PCT/KR2026/003422 (2026.03.04).</span>
+    </li>
+    <li>
+      <strong>Selective On-Device Execution of Data-Dependent Read I/Os</strong><br>
+      Hyungon Moon, <span class="me">Chanyoung Park</span>, and Minu Chung.
+      <span class="patent-meta">Filed: US 19/439,086 (2026.01.02); KR 10-2025-0008325 (2025.01.20).</span>
+    </li>
+    <li>
+      <strong>Efficient Use-After-Free Prevention with Opportunistic Page-Level Sweeping</strong><br>
+      Hyungon Moon and <span class="me">Chanyoung Park</span>.
+      <span class="patent-meta">Filed: PCT/KR2025/000618 (2025.01.10); KR 10-2024-0022931 (2024.02.16).</span>
+    </li>
+    <li>
+      <strong>Apparatus and Method for Deallocating Dynamically Allocated Memory</strong><br>
+      Hyungon Moon, <span class="me">Chanyoung Park</span>, Jaehyu Lee, and Daeyeon Kim.
+      <span class="patent-meta">Granted: US 12,353,322 (2025.07.08); KR 10-2787851 (2025.03.24). Filed: KR 10-2022-0170530 (2022.12.08).</span>
+    </li>
   </ul>
 </section>
 
@@ -151,31 +172,72 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
   <h2>Research Experience</h2>
   <div class="timeline-list">
     <div class="timeline-item">
-      <div class="timeline-meta">Feb 2020 &ndash; Present</div>
+      <div class="timeline-meta">Mar 2022 &ndash; Present</div>
       <div class="timeline-content">
-        <strong>Memory Allocator for Temporal Safety</strong>
-        <p>Designed and implemented HushVac and HushVac+, efficiently mitigating Use-After-Free (UAF) vulnerabilities. Collaborated on SwiftSweeper, a sweeping architecture eliminating stop-the-world pauses. Pioneered early work on OS-assisted UAF prevention on Glibc (MarKern).</p>
+        <strong>Efficient and Secure Memory Management</strong>
+        <p>Designed and implemented HushVac and HushVac+, opportunistic page-level sweeping allocators that mitigate use-after-free at low runtime and memory overhead (NDSS 2024, TDSC 2025). Contributed to SwiftSweeper, a concurrent memory sweeper that removes stop-the-world pauses (S&amp;P 2025). Built MarKern, OS-supported UAF prevention for the glibc allocator (JOK 2023).</p>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-meta">Jan 2024 &ndash; Feb 2025</div>
+      <div class="timeline-meta">Jan 2025 &ndash; Aug 2026</div>
       <div class="timeline-content">
-        <strong>In-Storage Computing Architectures</strong>
-        <p>Developed SODE, a mechanism for selective on-device execution of data-dependent read I/Os to optimize storage operations.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-meta">Nov 2023 &ndash; Feb 2024</div>
-      <div class="timeline-content">
-        <strong>Program Analysis with SVF</strong>
-        <p>Used LLVM and Static Value-Flow (SVF) analysis to identify memory-allocator call sites used only within the stack. Published in KIPS ACK 2024 (second author).</p>
+        <strong>Compartmentalization for Unsafe Rust and FFI</strong>
+        <p>Designing an Intel MPK-based isolation mechanism for unsafe Rust and FFI, using static program analysis to identify memory that crosses the safe/unsafe boundary.</p>
       </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-meta">Dec 2025 &ndash; Mar 2026</div>
       <div class="timeline-content">
-        <strong>Serverless Computing Optimization</strong>
-        <p>Collaborated on FaaSlim, optimizing serverless computing through partial caching of snapshot-based VMs.</p>
+        <strong>Serverless Computing &amp; Resource Management</strong>
+        <p>Contributed to FaaSlim, a snapshot-based serverless system that partially caches VM pages to reduce cold-start overhead and idle memory use (ICS 2026).</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">Jan 2024 &ndash; Feb 2025</div>
+      <div class="timeline-content">
+        <strong>Near-Data / In-Storage Computing</strong>
+        <p>Designed and implemented SODE, which offloads data-dependent read I/Os to the storage device, eliminating host-to-device round trips for data-intensive workloads (FAST 2025).</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">Nov 2023 &ndash; Feb 2024</div>
+      <div class="timeline-content">
+        <strong>Program Analysis for Systems Optimization</strong>
+        <p>Contributed to a static-analysis pass built on LLVM and Static Value-Flow (SVF) analysis that identifies allocator call sites confined to the stack, enabling targeted allocation-overhead optimizations (ASK 2024).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Research Projects</h2>
+  <div class="timeline-list">
+    <div class="timeline-item">
+      <div class="timeline-meta">2024 &ndash; 2026</div>
+      <div class="timeline-content">
+        <strong>Integrated Platform for Safely Expanding Memory-Safe Languages</strong> &middot; IITP
+        <p>Intel MPK compartmentalization for unsafe Rust and FFI, guided by program analysis.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">2024 &ndash; 2026</div>
+      <div class="timeline-content">
+        <strong>Binary Micro-Security Patching under Software Supply-Chain Environments</strong> &middot; IITP
+        <p>Fast, safe security patching of deployed binaries to avoid downtime for long-running services.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">2022 &ndash; 2026</div>
+      <div class="timeline-content">
+        <strong>Samsung Electronics Industry&ndash;Academic Cooperation</strong> &middot; Samsung Electronics
+        <p>Developed SODE (on-device execution of data-dependent read I/Os) and contributed to FaaSlim (partial caching of snapshot-based VMs for serverless cold starts).</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">2022 &ndash; 2024</div>
+      <div class="timeline-content">
+        <strong>RISC-V-Based Secure CPU for Embedded Malware Detection and Recovery</strong> &middot; IITP
+        <p>HushVac / HushVac+ opportunistic page-level sweeping allocator for use-after-free prevention; contributed to SwiftSweeper.</p>
       </div>
     </div>
   </div>
@@ -187,8 +249,9 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
     <div class="timeline-item">
       <div class="timeline-meta">Mar 2022 &ndash; Aug 2026<br><span class="timeline-note">(Expected)</span></div>
       <div class="timeline-content">
-        <strong>Combined Master and Ph.D. in Computer Science Engineering</strong><br>
+        <strong>Combined M.S./Ph.D. in Computer Science and Engineering</strong><br>
         Ulsan National Institute of Science and Technology (UNIST)
+        <p>Advisor: Prof. Hyungon Moon. Dissertation: <em>An Efficient and Secure Memory Allocator for Use-after-Free Prevention</em>.</p>
       </div>
     </div>
     <div class="timeline-item">
@@ -202,20 +265,13 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
 </section>
 
 <section id="teaching">
-  <h2>Teaching &amp; Experience</h2>
+  <h2>Teaching Experience</h2>
   <div class="timeline-list">
     <div class="timeline-item">
       <div class="timeline-meta">Mar 2022 &ndash; Jul 2024</div>
       <div class="timeline-content">
         <strong>Teaching Assistant &ndash; UNIST</strong>
-        <p>Software Hacking and Defense (2022), Building Customized Computers (2022), Advanced Programming (2023), Principles of Programming Languages (2023), and Operating System (2024).</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-meta">Feb 2020 &ndash; Feb 2022</div>
-      <div class="timeline-content">
-        <strong>Undergraduate Research Assistant &ndash; UNIST</strong>
-        <p>Computer System Security Lab. Built early OS-assisted Use-After-Free prevention for the Glibc allocator (MarKern), published in the Journal of KIISE.</p>
+        <p>Operating Systems, Software Hacking and Defense, Building Customized Computers, Advanced Programming, and Principles of Programming Languages. Managed the PintOS assignments for Operating Systems and prepared LLVM-based compiler stacks for Building Customized Computers.</p>
       </div>
     </div>
   </div>
@@ -224,8 +280,8 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
 <section id="misc">
   <h2>Honors, Awards &amp; Service</h2>
   <ul class="bullet-list">
-    <li><strong>Artifact Evaluation Program Committee</strong> &ndash; ACM EuroSys (Fall 2025)</li>
-    <li><strong>Student Grant</strong> &ndash; USENIX FAST (Feb. 2025)</li>
-    <li><strong>Invited Talk</strong> &ndash; Samsung Security Tech Forum (SSTF) 2024</li>
+    <li><strong>USENIX FAST Student Grant</strong> &ndash; USENIX Association (Feb. 2025)</li>
+    <li><strong>Invited Talk</strong> &ndash; &ldquo;Efficient Use-After-Free Prevention with Opportunistic Page-Level Sweeping,&rdquo; Samsung Security Tech Forum (SSTF) 2024, Seoul</li>
+    <li><strong>Artifact Evaluation Committee</strong> &ndash; ACM EuroSys 2025 (Jan.&ndash;Feb. 2025), Rotterdam</li>
   </ul>
 </section>
