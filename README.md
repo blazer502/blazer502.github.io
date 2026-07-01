@@ -1,6 +1,39 @@
 # BLAZER502
 Personal Pages
 
+## Site structure
+
+The site is a blog first, with the CV and knowledge base one click away:
+
+| Area | URL | Source |
+| --- | --- | --- |
+| Blog (home) | `/` | `index.html` + posts in `_posts/` |
+| CV | `/cv/` | `cv.html` |
+| Notes (knowledge base) | `/notes/` | compiled from `notes/` into `wiki/notes/` |
+
+Shared chrome (nav, footer, SEO) lives in `_layouts/base.html`; posts use
+`_layouts/post.html`. Styling is in `styles.css`.
+
+## Blog
+
+Add a post by creating `_posts/YYYY-MM-DD-title.md`:
+
+```markdown
+---
+title: "Your title"
+date: 2026-07-01
+category: Security        # shown next to the date; groups the post
+tags: [security, memory-safety]
+description: "One or two sentences used for the excerpt and social preview."
+---
+
+Write in Markdown. The first paragraph is used as the excerpt on the home page.
+```
+
+Posts appear newest-first on the home page and get a clean URL like
+`/blog/2026/07/01/title/`. No `layout:` line is needed — it is applied
+automatically.
+
 ## Local Jekyll Setup
 
 This site expects Ruby 3 or newer. On this machine, use the Homebrew Ruby before
