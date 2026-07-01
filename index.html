@@ -19,7 +19,7 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
       <a href="https://www.linkedin.com/in/park-chanyoung-826567195" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://sites.google.com/view/chanyoungpark" target="_blank" rel="noopener">Google Sites</a>
       <a href="{{ '/blog/' | relative_url }}">Blog</a>
-      <a href="{{ '/assets/doc/Chanyoung-Park-CV.pdf' | relative_url }}" class="cv-download" download>Download CV (PDF)</a>
+      <a href="{{ '/Chanyoung-Park-CV.pdf' | relative_url }}" class="cv-download" download>Download CV (PDF)</a>
     </div>
   </div>
 </header>
@@ -113,6 +113,31 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
       </div>
     </div>
   </div>
+
+  <h3 class="subsection-title">Domestic Publications</h3>
+  <div class="pub-list">
+    <div class="pub-item">
+      <div class="pub-meta">
+        <span class="badge badge-domestic">KIISE</span>
+      </div>
+      <div class="pub-content">
+        <strong>Operating System Support-based Prevention Mechanism for Use-after-Free Attacks on the Glibc Memory Allocator (MarKern)</strong>
+        <span class="me">Chanyoung Park</span> and Hyungon Moon.<br>
+        <span class="venue">Journal of KIISE</span>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-meta">
+        <span class="badge badge-domestic">KIPS 2024</span>
+      </div>
+      <div class="pub-content">
+        <strong>Analysis of Memory Allocator Call Sites Used Only Within the Stack Using SVF</strong>
+        <span class="me">Chanyoung Park</span> (second author).<br>
+        <span class="venue">KIPS Annual Conference on Computing (ACK)</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="experience">
@@ -130,6 +155,13 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
       <div class="timeline-content">
         <strong>In-Storage Computing Architectures</strong>
         <p>Developed SODE, a mechanism for selective on-device execution of data-dependent read I/Os to optimize storage operations.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">Nov 2023 &ndash; Feb 2024</div>
+      <div class="timeline-content">
+        <strong>Program Analysis with SVF</strong>
+        <p>Used LLVM and Static Value-Flow (SVF) analysis to identify memory-allocator call sites used only within the stack. Published in KIPS ACK 2024 (second author).</p>
       </div>
     </div>
     <div class="timeline-item">
@@ -162,12 +194,31 @@ description: "Chanyoung Park — Ph.D. student at UNIST (Computer System Securit
   </div>
 </section>
 
+<section id="teaching">
+  <h2>Teaching &amp; Experience</h2>
+  <div class="timeline-list">
+    <div class="timeline-item">
+      <div class="timeline-meta">Mar 2022 &ndash; Jul 2024</div>
+      <div class="timeline-content">
+        <strong>Teaching Assistant &ndash; UNIST</strong>
+        <p>Software Hacking and Defense (2022), Building Customized Computers (2022), Advanced Programming (2023), Principles of Programming Languages (2023), and Operating System (2024).</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">Feb 2020 &ndash; Feb 2022</div>
+      <div class="timeline-content">
+        <strong>Undergraduate Research Assistant &ndash; UNIST</strong>
+        <p>Computer System Security Lab. Built early OS-assisted Use-After-Free prevention for the Glibc allocator (MarKern), published in the Journal of KIISE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="misc">
   <h2>Honors, Awards &amp; Service</h2>
   <ul class="bullet-list">
     <li><strong>Artifact Evaluation Program Committee</strong> &ndash; ACM EuroSys (Fall 2025)</li>
     <li><strong>Student Grant</strong> &ndash; USENIX FAST (Feb. 2025)</li>
     <li><strong>Invited Talk</strong> &ndash; Samsung Security Tech Forum (SSTF) 2024</li>
-    <li><strong>Teaching Assistant</strong> &ndash; Operating Systems, Software Hacking and Defense, Building Customized Computers (2022&ndash;2024)</li>
   </ul>
 </section>

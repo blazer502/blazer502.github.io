@@ -317,6 +317,7 @@ a:hover {
 
 /* Custom badge colors for conferences */
 .badge-top { background-color: #16a34a; } /* Green for Top conferences */
+.badge-domestic { background-color: #64748b; } /* Slate for domestic venues */
 
 .pub-content {
   flex: 1;
