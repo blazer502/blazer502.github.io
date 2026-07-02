@@ -1,0 +1,15 @@
+---
+layout: null
+sitemap: false
+permalink: /okf/log.md
+---
+# Update Log
+
+Chronological history of this knowledge bundle, newest first. Dates use ISO
+8601 (`YYYY-MM-DD`). Entries are generated from the publication dates of the
+posts in this bundle.
+
+{% assign okf_posts = site.posts | sort: "date" | reverse -%}
+{% for post in okf_posts %}## {{ post.date | date: "%Y-%m-%d" }}
+* **Creation**: Published [{{ post.title | strip }}]({{ post.url | absolute_url }}).
+{% endfor %}

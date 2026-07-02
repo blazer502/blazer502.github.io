@@ -33,6 +33,29 @@ Posts appear newest-first at `/blog/` and get a clean URL like
 `/blog/2026/07/01/title/`. No `layout:` line is needed — it is applied
 automatically.
 
+## AI-friendly knowledge layer (OKF)
+
+The site publishes a machine-readable knowledge layer for AI agents, built on
+Google's [Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
+(OKF). It is **auto-generated at build time** from the blog posts, so it never
+drifts — you don't have to maintain it by hand. Adding a post automatically
+adds it to the bundle, the log, and `llms.txt`.
+
+| Output | Source | Purpose |
+| --- | --- | --- |
+| `/okf/index.md` | `okf/index.html` | OKF bundle root; progressive-disclosure map |
+| `/okf/cv.md` | `okf/cv.html` | OKF concept for the CV / profile |
+| `/okf/log.md` | `okf/log.html` | Update log built from post dates |
+| `/okf/profile.md` | `okf/profile.html` | How this bundle adapts OKF (the "OKF-Blog profile") |
+| `/llms.txt` | `llms.html` | AI-discovery index pointing to the bundle |
+| `/robots.txt` | `robots.html` | Welcomes crawlers; references the bundle + sitemap |
+
+Each `okf/*.html` / `*.html` source uses a minimal Jekyll front-matter block
+(`layout: null` + a `.md`/`.txt` `permalink`) so Jekyll emits **raw markdown /
+text** rather than an HTML page — no plugins, works on GitHub Pages. Every page
+also advertises the bundle via `<link rel="alternate" type="text/markdown">`,
+and each post carries `BlogPosting` JSON-LD.
+
 ## Local Jekyll Setup
 
 This site expects Ruby 3 or newer. On this machine, use the Homebrew Ruby before

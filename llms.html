@@ -1,0 +1,30 @@
+---
+layout: null
+sitemap: false
+permalink: /llms.txt
+---
+# Chanyoung Park
+
+> PhD student in system security at UNIST (South Korea). This site is a CV and a
+> blog on operating systems, memory safety, and research life.
+
+A machine-readable [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
+knowledge bundle for this site lives at {{ '/okf/index.md' | absolute_url }} —
+start there for a map of everything below, as plain markdown.
+
+## Knowledge bundle
+
+- [OKF bundle root]({{ '/okf/index.md' | absolute_url }}): Progressive-disclosure map of this site's knowledge.
+- [CV & profile (OKF)]({{ '/okf/cv.md' | absolute_url }}): Research profile, education, publications.
+- [OKF-Blog profile]({{ '/okf/profile.md' | absolute_url }}): How this bundle adapts OKF.
+
+## Blog
+{% assign okf_posts = site.posts | sort: "date" | reverse %}
+{%- for post in okf_posts %}
+- [{{ post.title | strip }}]({{ post.url | absolute_url }}): {{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 160 }}
+{%- endfor %}
+
+## Also
+
+- [CV (web)]({{ '/' | absolute_url }}): Full CV, publications, and patents.
+- [CV (PDF)]({{ '/Chanyoung-Park-CV.pdf' | absolute_url }}): Downloadable CV.

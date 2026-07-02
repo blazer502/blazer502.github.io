@@ -1,0 +1,56 @@
+---
+layout: null
+sitemap: false
+permalink: /okf/profile.md
+---
+---
+type: Reference
+title: OKF-Blog Profile
+description: How this site adapts Google's Open Knowledge Format (OKF) for a personal blog + CV.
+timestamp: {{ site.time | date_to_xmlschema }}
+---
+
+# OKF-Blog Profile
+
+This bundle follows the [Open Knowledge Format
+(OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md),
+v0.1. OKF was written for data catalogs; this profile records the few choices
+that adapt it to a **personal blog + CV**. Everything here is compatible with
+the base spec — consumers that only know plain OKF can ignore this file.
+
+# What is different from a data catalog
+
+A data catalog describes tables and datasets. This bundle describes *writing*
+and a *professional record*. So:
+
+* The bundle is **auto-generated at build time** from the site's blog posts,
+  so it never drifts from the published content.
+* A post's canonical form is its rendered HTML page. In OKF terms, each post is
+  a concept whose `resource` is that page's URL. The bundle root
+  ([index.md](index.md)) is the map; fetch a post's URL for the full text.
+
+# Type vocabulary
+
+`type` is a free-form string in OKF. This bundle uses:
+
+| `type`            | Meaning                                             |
+|-------------------|-----------------------------------------------------|
+| `Knowledge Bundle`| The bundle root ([index.md](index.md)).             |
+| `Profile`         | The author / CV concept ([cv.md](cv.md)).           |
+| `Reference`       | Supporting docs like this profile.                  |
+| Blog `category`   | A post's `category` (e.g. `Security`, `Meta`) is its concept type. |
+
+# Reserved & discovery files
+
+* [index.md](index.md) — bundle root, with progressive-disclosure listing (§6).
+* [log.md](log.md) — update history (§7).
+* `/llms.txt` and `/robots.txt` at the site root point agents to this bundle.
+  A `<link rel="alternate" type="text/markdown">` on every page does the same.
+
+# Conventions
+
+* Cross-links inside the bundle are **relative** (e.g. `cv.md`) so they resolve
+  under `/okf/` when served over HTTP.
+* Links to posts are **absolute canonical URLs**, since posts live outside the
+  bundle as HTML resources.
+* Timestamps are ISO 8601 and reflect the last site build.
