@@ -1,0 +1,14 @@
+---
+layout: null
+sitemap: false
+permalink: /robots.txt
+---
+# Everyone, including AI agents and crawlers, is welcome.
+User-agent: *
+Allow: /
+
+# AI agents: a machine-readable knowledge layer is available.
+#   llms.txt:    {{ '/llms.txt' | absolute_url }}
+#   OKF bundle:  {{ '/okf/index.md' | absolute_url }}
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}

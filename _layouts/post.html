@@ -1,6 +1,21 @@
 ---
 layout: base
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+  {%- if page.category %}"articleSection": {{ page.category | jsonify }},{% endif %}
+  {%- if page.tags and page.tags.size > 0 %}"keywords": {{ page.tags | join: ", " | jsonify }},{% endif %}
+  "author": { "@type": "Person", "name": "Chanyoung Park", "url": "{{ '/' | absolute_url }}" },
+  "publisher": { "@type": "Person", "name": "Chanyoung Park", "url": "{{ '/' | absolute_url }}" }
+}
+</script>
 <article class="post">
   <header class="post-header">
     <div class="post-meta">

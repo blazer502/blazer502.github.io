@@ -1,0 +1,48 @@
+---
+layout: null
+sitemap: false
+permalink: /okf/index.md
+---
+---
+okf_version: "0.1"
+type: Knowledge Bundle
+title: Chanyoung Park — Knowledge Bundle
+description: An OKF knowledge bundle for Chanyoung Park's blog and CV, written for both humans and AI agents.
+resource: {{ '/okf/' | absolute_url }}
+timestamp: {{ site.time | date_to_xmlschema }}
+---
+
+# Chanyoung Park — Knowledge Bundle
+
+This is an [Open Knowledge Format](profile.md) (OKF) bundle describing the
+writing and professional record of **Chanyoung Park** — a PhD student in
+system security at UNIST. It exists so that AI agents (and curious humans)
+can discover and traverse this site's knowledge as plain, diffable markdown,
+without scraping HTML.
+
+Start here, then follow the links below. Each entry carries a one-line
+description so you can decide what to open before fetching it.
+
+## About
+
+* [CV & Profile](cv.md) - Research profile, education, and publications; PhD student in system security at UNIST.
+
+## Posts
+
+{% assign okf_posts = site.posts | sort: "date" | reverse -%}
+{% for post in okf_posts -%}
+{%- assign snippet = post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 180 -%}
+* [{{ post.title | strip }}]({{ post.url | absolute_url }}) - {{ snippet }}{% if post.category %} _(type: {{ post.category }} post{% if post.tags and post.tags.size > 0 %}; tags: {{ post.tags | join: ", " }}{% endif %})_{% endif %}
+{% endfor %}
+## Bundle files
+
+* [profile.md](profile.md) - How this bundle adapts OKF for a personal blog.
+* [log.md](log.md) - Chronological history of updates to this bundle.
+
+## Notes for consuming agents
+
+* Posts above are canonical HTML pages; their `resource` URI is the linked URL.
+  Fetch the URL for full content. This bundle is the map, not the territory.
+* Unknown `type` values and missing optional fields are expected — consume
+  best-effort per the OKF spec, and see [profile.md](profile.md) for the small
+  set of conventions this bundle follows.
